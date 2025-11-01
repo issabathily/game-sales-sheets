@@ -69,16 +69,16 @@ const SettingsView = ({ games, onAddGame, onUpdateGame, onDeleteGame }: Settings
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 md:space-y-8 animate-in fade-in duration-500">
       <div>
-        <h2 className="text-3xl font-bold text-foreground mb-2">Paramètres</h2>
-        <p className="text-muted-foreground">Gérez vos jeux et leurs prix par défaut</p>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2">Paramètres</h2>
+        <p className="text-sm md:text-base text-muted-foreground">Gérez vos jeux et leurs prix par défaut</p>
       </div>
 
       {/* Add Game Form */}
-      <Card className="p-6">
-        <h3 className="text-lg font-semibold text-foreground mb-4">Ajouter un jeu</h3>
-        <div className="flex gap-4 items-end">
+      <Card className="p-4 md:p-6 hover:shadow-lg transition-all duration-300">
+        <h3 className="text-base md:text-lg font-semibold text-foreground mb-4">Ajouter un jeu</h3>
+        <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-end">
           <div className="flex-1">
             <label className="text-sm font-medium text-foreground mb-2 block">Nom du jeu</label>
             <Input
@@ -88,7 +88,7 @@ const SettingsView = ({ games, onAddGame, onUpdateGame, onDeleteGame }: Settings
             />
           </div>
           
-          <div className="w-32">
+          <div className="w-full md:w-32">
             <label className="text-sm font-medium text-foreground mb-2 block">Prix ($)</label>
             <Input
               type="number"
@@ -99,7 +99,7 @@ const SettingsView = ({ games, onAddGame, onUpdateGame, onDeleteGame }: Settings
             />
           </div>
           
-          <Button onClick={handleAddGame}>
+          <Button onClick={handleAddGame} className="w-full md:w-auto">
             <Plus className="w-4 h-4 mr-2" />
             Ajouter
           </Button>
@@ -107,24 +107,24 @@ const SettingsView = ({ games, onAddGame, onUpdateGame, onDeleteGame }: Settings
       </Card>
 
       {/* Games List */}
-      <Card className="overflow-hidden">
-        <div className="p-6 bg-secondary border-b border-border">
-          <h3 className="text-lg font-semibold text-foreground">Jeux ({games.length})</h3>
+      <Card className="overflow-hidden hover:shadow-lg transition-all duration-300">
+        <div className="p-4 md:p-6 bg-secondary border-b border-border">
+          <h3 className="text-base md:text-lg font-semibold text-foreground">Jeux ({games.length})</h3>
         </div>
         
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead className="bg-secondary/50">
               <tr>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-foreground">Nom</th>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-foreground">Prix par défaut</th>
-                <th className="px-6 py-3 text-right text-sm font-semibold text-foreground">Actions</th>
+                <th className="px-3 md:px-6 py-2 md:py-3 text-left text-xs md:text-sm font-semibold text-foreground">Nom</th>
+                <th className="px-3 md:px-6 py-2 md:py-3 text-left text-xs md:text-sm font-semibold text-foreground">Prix par défaut</th>
+                <th className="px-3 md:px-6 py-2 md:py-3 text-right text-xs md:text-sm font-semibold text-foreground">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
               {games.map(game => (
                 <tr key={game.id} className="hover:bg-secondary/30 transition-colors">
-                  <td className="px-6 py-4">
+                  <td className="px-3 md:px-6 py-3 md:py-4">
                     {editingId === game.id ? (
                       <Input
                         value={editName}
@@ -132,23 +132,23 @@ const SettingsView = ({ games, onAddGame, onUpdateGame, onDeleteGame }: Settings
                         className="max-w-xs"
                       />
                     ) : (
-                      <span className="text-sm font-medium text-foreground">{game.name}</span>
+                      <span className="text-xs md:text-sm font-medium text-foreground">{game.name}</span>
                     )}
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-3 md:px-6 py-3 md:py-4">
                     {editingId === game.id ? (
                       <Input
                         type="number"
                         step="0.01"
                         value={editPrice}
                         onChange={(e) => setEditPrice(e.target.value)}
-                        className="w-32"
+                        className="w-28 md:w-32"
                       />
                     ) : (
-                      <span className="text-sm text-foreground">${game.defaultPrice.toFixed(2)}</span>
+                      <span className="text-xs md:text-sm text-foreground">${game.defaultPrice.toFixed(2)}</span>
                     )}
                   </td>
-                  <td className="px-6 py-4 text-right">
+                  <td className="px-3 md:px-6 py-3 md:py-4 text-right">
                     {editingId === game.id ? (
                       <div className="flex gap-2 justify-end">
                         <Button size="sm" onClick={() => handleSaveEdit(game.id)}>

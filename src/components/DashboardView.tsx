@@ -56,14 +56,14 @@ const DashboardView = ({ sheets, todayDate }: DashboardViewProps) => {
   }
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-3xl font-bold text-foreground mb-2">Dashboard</h2>
-        <p className="text-muted-foreground">Vue d'ensemble des ventes du studio</p>
+    <div className="space-y-6 md:space-y-8 animate-in fade-in duration-500">
+      <div className="space-y-2">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">Dashboard</h2>
+        <p className="text-sm md:text-base text-muted-foreground">Vue d'ensemble des ventes du studio</p>
       </div>
 
       {/* Metrics Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         <MetricCard
           title="Revenus du jour"
           value={`$${todayTotal.toFixed(2)}`}
@@ -106,10 +106,10 @@ const DashboardView = ({ sheets, todayDate }: DashboardViewProps) => {
       </div>
 
       {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
         {/* Bar Chart */}
-        <Card className="p-6">
-          <h3 className="text-lg font-semibold text-foreground mb-4">Revenus - 7 derniers jours</h3>
+        <Card className="p-4 md:p-6 hover:shadow-lg transition-all duration-300 border-border/50">
+          <h3 className="text-base md:text-lg font-semibold text-foreground mb-4">Revenus - 7 derniers jours</h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={last7Days}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
@@ -128,8 +128,8 @@ const DashboardView = ({ sheets, todayDate }: DashboardViewProps) => {
         </Card>
 
         {/* Pie Chart */}
-        <Card className="p-6">
-          <h3 className="text-lg font-semibold text-foreground mb-4">Répartition par jeu (Aujourd'hui)</h3>
+        <Card className="p-4 md:p-6 hover:shadow-lg transition-all duration-300 border-border/50">
+          <h3 className="text-base md:text-lg font-semibold text-foreground mb-4">Répartition par jeu (Aujourd'hui)</h3>
           {pieData.length > 0 ? (
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
