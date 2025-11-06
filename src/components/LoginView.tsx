@@ -61,7 +61,7 @@ const LoginView = ({ onLoginSuccess }: LoginViewProps) => {
             <Input
               id="username"
               type="text"
-              placeholder="gerant ou proprietaire"
+              placeholder="Entrez votre nom d'utilisateur"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               disabled={loading}
@@ -100,22 +100,6 @@ const LoginView = ({ onLoginSuccess }: LoginViewProps) => {
             )}
           </Button>
         </form>
-
-        <div className="mt-6 pt-6 border-t border-border">
-          <p className="text-xs text-muted-foreground text-center mb-2">
-            Comptes de démonstration :
-          </p>
-          <div className="space-y-2 text-xs">
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Gérant:</span>
-              <span className="font-mono">gerant / gerant123</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Propriétaire:</span>
-              <span className="font-mono">proprietaire / proprietaire123</span>
-            </div>
-          </div>
-        </div>
       </Card>
     </div>
   );
