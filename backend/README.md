@@ -46,3 +46,16 @@ Le serveur démarre sur le port 3001.
 
 Les données sont stockées dans `db.json` et sont automatiquement sauvegardées lors des modifications.
 
+## Déploiement sur Render
+
+1. Connectez votre repository GitHub à Render
+2. Créez un nouveau **Web Service**
+3. Configurez :
+   - **Root Directory** : `/` (racine du projet)
+   - **Build Command** : `cd backend && npm install`
+   - **Start Command** : `cd backend && npm start`
+   - **Environment** : Node.js
+   - **Port** : Render définit automatiquement la variable `PORT`
+
+Le serveur utilisera automatiquement le port fourni par Render via la variable d'environnement `PORT`.
+

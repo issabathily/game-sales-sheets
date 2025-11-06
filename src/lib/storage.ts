@@ -1,7 +1,8 @@
 import { SalesData, Game, DailySheet } from "@/types/sales";
 import { User } from "@/types/user";
+import { getApiUrl } from "./config";
 
-const API_URL = "http://localhost:3001";
+const API_URL = getApiUrl();
 
 // Charger toutes les données depuis JSON Server
 export const loadSalesData = async (): Promise<SalesData> => {

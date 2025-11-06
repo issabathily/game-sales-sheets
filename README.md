@@ -56,12 +56,30 @@ L'application démarre sur `http://localhost:8080`
 - **Backend**: JSON Server
 - **Base de données**: db.json (dans le dossier backend)
 
+## Configuration de l'API
+
+L'URL de l'API backend est configurée automatiquement :
+- **Développement** : `http://localhost:3001` (par défaut)
+- **Production** : `https://backendgame-sales-sheets.onrender.com` (automatique en mode production)
+
+Pour personnaliser l'URL, créez un fichier `.env` à la racine du projet :
+```env
+VITE_API_URL=https://backendgame-sales-sheets.onrender.com
+```
+
 ## Déploiement
+
+### Backend
+Le backend est déployé sur Render : `https://backendgame-sales-sheets.onrender.com`
+
+Pour déployer le backend :
+1. Connectez votre repository GitHub à Render
+2. Configurez le service avec :
+   - **Build Command** : `cd backend && npm install`
+   - **Start Command** : `cd backend && npm start`
+   - **Root Directory** : `/` (racine du projet)
 
 ### Frontend
 Le frontend peut être déployé sur n'importe quel service d'hébergement statique (Vercel, Netlify, etc.)
 
-### Backend
-Le backend peut être déployé sur un service supportant Node.js (Heroku, Railway, etc.)
-
-**Important**: N'oubliez pas de mettre à jour l'URL de l'API dans `src/lib/storage.ts` et `src/lib/auth.ts` lors du déploiement.
+**Note** : En mode production, l'application utilise automatiquement l'URL du backend déployé. Aucune configuration supplémentaire n'est nécessaire.

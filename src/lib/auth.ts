@@ -1,6 +1,7 @@
 import { User, UserRole } from "@/types/user";
+import { getApiUrl } from "./config";
 
-const API_URL = "http://localhost:3001";
+const API_URL = getApiUrl();
 
 // Authentifier un utilisateur (alias pour compatibilité)
 export const loginUser = async (credentials: { username: string; password: string }): Promise<User | null> => {
