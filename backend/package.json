@@ -1,0 +1,17 @@
+{
+  "name": "game-sales-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Game Sales Sheets using JSON Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3001 --host 0.0.0.0",
+    "dev": "json-server --watch db.json --port 3001"
+  },
+  "keywords": ["json-server", "api", "backend"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
+
