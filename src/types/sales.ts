@@ -13,6 +13,7 @@ export interface Sale {
 }
 
 export interface DailySheet {
+  id: string;
   date: string;
   sales: Sale[];
 }

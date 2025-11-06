@@ -80,7 +80,7 @@ const SalesView = ({ games, todaySheet, onAddSale, onExport }: SalesViewProps) =
           </div>
           
           <div className="w-full md:w-32">
-            <label className="text-sm font-medium text-foreground mb-2 block">Prix ($)</label>
+            <label className="text-sm font-medium text-foreground mb-2 block">Prix (FCFA)</label>
             <Input
               type="number"
               step="0.01"
@@ -127,10 +127,10 @@ const SalesView = ({ games, todaySheet, onAddSale, onExport }: SalesViewProps) =
                     <tr key={sale.id} className="hover:bg-secondary/50 transition-colors">
                       <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-muted-foreground">{index + 1}</td>
                       <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm font-medium text-foreground">{sale.gameName}</td>
-                      <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-foreground">${sale.price.toFixed(2)}</td>
+                      <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-foreground">{sale.price.toFixed(2)} FCFA</td>
                       <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-muted-foreground">{sale.time}</td>
                       <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm font-semibold text-foreground text-right">
-                        ${cumulativeTotal.toFixed(2)}
+                        {cumulativeTotal.toFixed(2)} FCFA
                       </td>
                     </tr>
                   );
@@ -144,7 +144,7 @@ const SalesView = ({ games, todaySheet, onAddSale, onExport }: SalesViewProps) =
                     Total du jour
                   </td>
                   <td className="px-3 md:px-6 py-3 md:py-4 text-base md:text-lg font-bold text-primary text-right">
-                    ${total.toFixed(2)}
+                    {total.toFixed(2)} FCFA
                   </td>
                 </tr>
               </tfoot>

@@ -1,0 +1,144 @@
+{
+  "games": [
+    {
+      "name": "Foot",
+      "defaultPrice": 200,
+      "id": 1
+    },
+    {
+      "name": "gta",
+      "defaultPrice": 200,
+      "id": 2
+    },
+    {
+      "name": "gta",
+      "defaultPrice": 200,
+      "id": 3
+    }
+  ],
+  "sheets": [
+    {
+      "id": "2025-11-01",
+      "date": "2025-11-01",
+      "sales": [
+        {
+          "id": "1762035729847",
+          "gameId": 1,
+          "gameName": "Foot",
+          "price": 200,
+          "time": "22:22:09"
+        },
+        {
+          "id": "1762035735362",
+          "gameId": 1,
+          "gameName": "Foot",
+          "price": 200,
+          "time": "22:22:15"
+        },
+        {
+          "id": "1762036202642",
+          "gameId": 1,
+          "gameName": "Foot",
+          "price": 200,
+          "time": "22:30:02"
+        },
+        {
+          "id": "1762036208607",
+          "gameId": 1,
+          "gameName": "Foot",
+          "price": 200,
+          "time": "22:30:08"
+        },
+        {
+          "id": "1762036551914",
+          "gameId": 1,
+          "gameName": "Foot",
+          "price": 200,
+          "time": "22:35:51"
+        }
+      ]
+    },
+    {
+      "id": "2025-11-02",
+      "date": "2025-11-02",
+      "sales": [
+        {
+          "id": "1762042509059",
+          "gameId": 1,
+          "gameName": "Foot",
+          "price": 200,
+          "time": "00:15:09"
+        },
+        {
+          "id": "1762077343869",
+          "gameId": 1,
+          "gameName": "Foot",
+          "price": 200,
+          "time": "09:55:43"
+        },
+        {
+          "id": "1762077349870",
+          "gameId": 2,
+          "gameName": "gta",
+          "price": 200,
+          "time": "09:55:49"
+        },
+        {
+          "id": "1762077591555",
+          "gameId": 2,
+          "gameName": "gta",
+          "price": 200,
+          "time": "09:59:51"
+        },
+        {
+          "id": "1762077599978",
+          "gameId": 3,
+          "gameName": "gta",
+          "price": 200,
+          "time": "09:59:59"
+        }
+      ]
+    },
+    {
+      "id": "2025-11-05",
+      "date": "2025-11-05",
+      "sales": [
+        {
+          "id": "1762374637606",
+          "gameId": 2,
+          "gameName": "gta",
+          "price": 200,
+          "time": "20:30:37"
+        },
+        {
+          "id": "1762374640847",
+          "gameId": 3,
+          "gameName": "gta",
+          "price": 200,
+          "time": "20:30:40"
+        }
+      ]
+    },
+    {
+      "id": "2025-11-06",
+      "date": "2025-11-06",
+      "sales": []
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "gerant",
+      "password": "gerant123",
+      "role": "gerant",
+      "name": "Gérant du Salon"
+    },
+    {
+      "id": "2",
+      "username": "proprietaire",
+      "password": "proprietaire123",
+      "role": "proprietaire",
+      "name": "Propriétaire du Salon"
+    }
+  ]
+}

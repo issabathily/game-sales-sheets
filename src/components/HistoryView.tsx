@@ -57,7 +57,7 @@ const HistoryView = ({ sheets, onSelectDate }: HistoryViewProps) => {
                       })}
                     </h3>
                     <p className="text-xs md:text-sm text-muted-foreground mt-1">
-                      {sheet.sales.length} vente(s) • Total: ${total.toFixed(2)}
+                      {sheet.sales.length} vente(s) • Total: {total.toFixed(2)} FCFA
                     </p>
                   </div>
 
@@ -76,7 +76,7 @@ const HistoryView = ({ sheets, onSelectDate }: HistoryViewProps) => {
                           <tr key={sale.id} className="hover:bg-secondary/30 transition-colors">
                             <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-muted-foreground">{index + 1}</td>
                             <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm font-medium text-foreground">{sale.gameName}</td>
-                            <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-foreground">${sale.price.toFixed(2)}</td>
+                            <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-foreground">{sale.price.toFixed(2)} FCFA</td>
                             <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-muted-foreground">{sale.time}</td>
                           </tr>
                         ))}
