@@ -5,11 +5,16 @@ const middlewares = jsonServer.defaults();
 
 // Utiliser le port fourni par Render ou 3001 par défaut
 const PORT = process.env.PORT || 3001;
+const HOST = '0.0.0.0';
 
 server.use(middlewares);
 server.use(router);
 
-server.listen(PORT, '0.0.0.0', () => {
-  console.log(`JSON Server is running on port ${PORT}`);
+server.listen(PORT, HOST, () => {
+  console.log(`JSON Server is running on http://${HOST}:${PORT}`);
+  console.log(`Resources available at:`);
+  console.log(`  http://${HOST}:${PORT}/games`);
+  console.log(`  http://${HOST}:${PORT}/sheets`);
+  console.log(`  http://${HOST}:${PORT}/users`);
 });
 
