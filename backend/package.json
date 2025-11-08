@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "json-server --watch db.json --port 3001"
+    "dev": "json-server --watch db.json --host 0.0.0.0 --port $PORT"
   },
   "keywords": ["json-server", "api", "backend"],
   "author": "",
